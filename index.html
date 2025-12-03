@@ -13,10 +13,10 @@
         <h1>Tatu Tallavaara</h1>
         <p>Computer Science student | Cybersecurity</p>
         <nav>
-            <a href="about">About</a>
-            <a href="skills">Skills</a>
-            <a href="projects">Projects</a>
-            <a href="contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -30,6 +30,35 @@
 
     <section id="skills">
         <h2>Skills</h2>
+        
+        <div class="skills">
+            <button id="programming_languages" onclick="show_skills('programming_languages')">Programming Languages</button>
+            <button id="languages" onclick="show_skills('languages')">Languages</button>
+            <button id="frameworks" onclick="show_skills('frameworks')">Frameworks</button>
+        </div>
+
+        <div class="programming_languages">
+            <button id="python" onclick="show_skill_level('python')">Python</button>
+            <button id="java" onclick="show_skill_level('java')">Java</button>
+            <button id="rust" onclick="show_skill_level('rust')">Rust</button>
+            <button id="assembly" onclick="show_skill_level('assembly')">Assembly (Y86)</button>
+            <button id="js" onclick="show_skill_level('js')">JavaScript</button>
+            <button id="html" onclick="show_skill_level('html')">HTML</button>
+        </div>
+
+        <div class="languages">
+            <button id="finnish" onclick="show_skill_level('finnish')">Finnish</button>
+            <button id="english" onclick="show_skill_level('english')">English</button>
+            <button id="sweden" onclick="show_skill_level('swedish')">Swedish</button>
+            <button id="arabic" onclick="show_skill_level('arabic')">Arabic</button>
+        </div>
+
+        <div class="frameworks">
+            <button id="posgresql">Postgre SQL</button>
+            <button id="sqlite">SQLite</button>
+            <button id="fastapi">FastAPI</button>
+        </div>
+
     </section>
 
     <section id="projects">
@@ -39,25 +68,36 @@
             <h3>Meme Database</h3>
             <p>
                 Stores memes including tags to a database. The memes can 
-                be searched by tags and by meme title or id.
+                be searched by tags and by the title or the id of the meme.
             </p>
-            <a href="url">https://github.com/turvasa/meme-database</a>
+            <button onclick="window.open('https://github.com/turvasa-ko/meme-database', '_blank');">GitHub</button>
         </div>
 
         <div class="project">
             <h3>YO-prep</h3>
             <p>
-                Can be used to do Finnish matriculation examinations. After
+                Can be used to practise Finnish matriculation examinations. After
                 giving the answer an AI will evaluate it using the "good
                 answer fundamentals". The answers and grade/points will
                 be stored to a database, where the user can look them up.
             </p>
-            <a href="url">https://github.com/turvasa/yo-prep</a>
+            <button onclick="window.open('https://github.com/turvasa-ko/yo-prep', '_blank');">GitHub</button>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
+        <div class="contact">
+            <p>Email: </p>
+            <a href="url">tatu.tallavaara@gmail.com</a><br>
+
+            <p>Phone Num: +358 40 935 9252</p>
+        </div>
+
+        <div class="social_links">
+            <button onclick="window.open('https://github.com/turvasa-ko', '_blank');">GitHub</button><br>
+            <button onclick="window.open('https://www.linkedin.com/in/tatu-tallavaara-106410228/', '_blank');">LinkedIn</button>
+        </div>
     </section>
 
     <footer>
