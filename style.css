@@ -17,3 +17,12 @@ header {
     padding: 60px 20px;
     background: #020617;
 }
+
+section {
+    text-align: center;
+    padding: auto;
+}
+
+.hidden {
+    display: None;
+}

@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <!-- Head -->
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tatu Tallavaara - Portfolio</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js"></script>
     </head>
 
+
+
+    <!-- Headers -->
     <header>
         <h1>Tatu Tallavaara</h1>
         <p>Computer Science student | Cybersecurity</p>
         <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <button class="button" href="#about">About</button>
+            <button class="button" href="#skills">Skills</button>
+            <button class="button" href="#projects">Projects</button>
+            <button class="button" href="#contact">Contact</button>
         </nav>
     </header>
 
+
+
+    <!-- About Me -section -->
     <section id="about">
         <h2>About Me</h2>
         <p>
@@ -28,39 +35,49 @@
         </p>
     </section>
 
+
+
+    <!-- Skills -section -->
     <section id="skills">
         <h2>Skills</h2>
         
-        <div class="skills">
-            <button id="programming_languages" onclick="show_skills('programming_languages')">Programming Languages</button>
-            <button id="languages" onclick="show_skills('languages')">Languages</button>
-            <button id="frameworks" onclick="show_skills('frameworks')">Frameworks</button>
+        <!-- Skill buttons -->
+        <div id="skill_buttons">
+            <button class="skill_button" id="programming_languages" onclick="show_skills('PROGRAMMING_LANGUAGES')">Programming Languages</button>
+            <button class="skill_button" id="languages"             onclick="show_skills('LANGUAGES')">Languages</button>
+            <button class="skill_button" id="frameworks"            onclick="show_skills('FRAMEWORKS')">Frameworks</button>
         </div>
 
-        <div class="programming_languages">
-            <button id="python" onclick="show_skill_level('python')">Python</button>
-            <button id="java" onclick="show_skill_level('java')">Java</button>
-            <button id="rust" onclick="show_skill_level('rust')">Rust</button>
-            <button id="assembly" onclick="show_skill_level('assembly')">Assembly (Y86)</button>
-            <button id="js" onclick="show_skill_level('js')">JavaScript</button>
-            <button id="html" onclick="show_skill_level('html')">HTML</button>
+        <!-- Hidden programming language buttons -->
+        <div class="hidden" id="programming_languages">
+            <button class="skill_button" id="python"   onclick="show_skill_level('PYTHON')">Python</button>
+            <button class="skill_button" id="java"     onclick="show_skill_level('JAVA')">Java</button>
+            <button class="skill_button" id="rust"     onclick="show_skill_level('RUST')">Rust</button>
+            <button class="skill_button" id="assembly" onclick="show_skill_level('ASSEMBLY')">Assembly (Y86)</button>
+            <button class="skill_button" id="js"       onclick="show_skill_level('JS')">JavaScript</button>
+            <button class="skill_button" id="html"     onclick="show_skill_level('HTML')">HTML</button>
         </div>
 
-        <div class="languages">
-            <button id="finnish" onclick="show_skill_level('finnish')">Finnish</button>
-            <button id="english" onclick="show_skill_level('english')">English</button>
-            <button id="sweden" onclick="show_skill_level('swedish')">Swedish</button>
-            <button id="arabic" onclick="show_skill_level('arabic')">Arabic</button>
+        <!-- Hidden laguage buttons -->
+        <div class="hidden" id="languages">
+            <button class="skill_button" id="finnish" onclick="show_skill_level('FINNISH')">Finnish</button>
+            <button class="skill_button" id="english" onclick="show_skill_level('ENGLISH')">English</button>
+            <button class="skill_button" id="sweden"  onclick="show_skill_level('SWEDISH')">Swedish</button>
+            <button class="skill_button" id="arabic"  onclick="show_skill_level('ARABIC')">Arabic</button>
         </div>
 
-        <div class="frameworks">
-            <button id="posgresql">Postgre SQL</button>
-            <button id="sqlite">SQLite</button>
-            <button id="fastapi">FastAPI</button>
+        <!-- Hidden framework buttons -->
+        <div class="hidden" id="frameworks">
+            <button class="skill_button" id="posgresql">Postgre SQL</button>
+            <button class="skill_button" id="sqlite">SQLite</button>
+            <button class="skill_button" id="fastapi">FastAPI</button>
         </div>
 
     </section>
 
+
+
+    <!-- My Projects -section -->
     <section id="projects">
         <h2>Projects</h2>
 
@@ -70,7 +87,7 @@
                 Stores memes including tags to a database. The memes can 
                 be searched by tags and by the title or the id of the meme.
             </p>
-            <button onclick="window.open('https://github.com/turvasa-ko/meme-database', '_blank');">GitHub</button>
+            <button class="button" onclick="window.open('https://github.com/turvasa-ko/meme-database', '_blank');">GitHub</button>
         </div>
 
         <div class="project">
@@ -81,10 +98,13 @@
                 answer fundamentals". The answers and grade/points will
                 be stored to a database, where the user can look them up.
             </p>
-            <button onclick="window.open('https://github.com/turvasa-ko/yo-prep', '_blank');">GitHub</button>
+            <button class="button" onclick="window.open('https://github.com/turvasa-ko/yo-prep', '_blank');">GitHub</button>
         </div>
     </section>
 
+
+
+    <!-- Contact Me -section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="contact">
@@ -95,11 +115,14 @@
         </div>
 
         <div class="social_links">
-            <button onclick="window.open('https://github.com/turvasa-ko', '_blank');">GitHub</button><br>
-            <button onclick="window.open('https://www.linkedin.com/in/tatu-tallavaara-106410228/', '_blank');">LinkedIn</button>
+            <button class="button" onclick="window.open('https://github.com/turvasa-ko', '_blank');">GitHub</button><br>
+            <button class="button" onclick="window.open('https://www.linkedin.com/in/tatu-tallavaara-106410228/', '_blank');">LinkedIn</button>
         </div>
     </section>
 
+
+
+    <!-- Footer -->
     <footer>
         <p>© 2025 Tatu Tallavaara</p>
     </footer>
