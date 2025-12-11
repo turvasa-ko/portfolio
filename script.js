@@ -1,66 +1,104 @@
 
 const SkillLevel = {
     1: "Fluent",
-    2: "Proficient",
-    3: "Fundamentals",
-    4: "Basics"
+    2: "Advanced",
+    3: "Proficient",
+    4: "Fundamentals",
+    5: "Basics"
 };
 
 
 const Language = {
     
     // Programming languages
-    PYTHON:   SkillLevel[2],
-    JAVA:     SkillLevel[1],
-    RUST:     SkillLevel[3],
-    ASSEMBLY: SkillLevel[4],
-    JS:       SkillLevel[3],
-    HTML:     SkillLevel[3],
+    PYTHON:   SkillLevel[3],
+    JAVA:     SkillLevel[2],
+    RUST:     SkillLevel[4],
+    ASSEMBLY: SkillLevel[5],
+    JS:       SkillLevel[4],
+    HTML:     SkillLevel[4],
 
     // Languages
     FINNISH: SkillLevel[1],
-    ENGLISH: SkillLevel[2],
-    SWEDISH: SkillLevel[3],
-    ARABIC:  SkillLevel[4]
+    ENGLISH: SkillLevel[3],
+    SWEDISH: SkillLevel[4],
+    ARABIC:  SkillLevel[5]
 };
 
 
 const Skills = {
     PROGRAMMING_LANGUAGE: [
-        Language.PYTHON,
-        Language.JAVA,
-        Language.RUST,
-        Language.ASSEMBLY,
-        Language.JS,
-        Language.HTML
+        {name: "Python", level: SkillLevel[3]},
+        {name: "Java", level: SkillLevel[2]},
+        {name: "Rust", level: SkillLevel[4]},
+        {name: "Assembly (Y86-64)", level: SkillLevel[5]},
+        {name: "JavaScript", level: SkillLevel[4]},
+        {name: "HTML", level: SkillLevel[4]}
     ],
     LANGUAGE: [
-        Language.FINNISH,
-        Language.ENGLISH,
-        Language.SWEDISH,
-        Language.ARABIC
+        {name: "Finnish", level: SkillLevel[1]},
+        {name: "English", level: SkillLevel[3]},
+        {name: "Swedish", level: SkillLevel[4]},
+        {name: "Arabics", level: SkillLevel[5]}
     ],
     FRAMEWORK: [
-        "postgresql",
-        "sqlite",
-        "fastapi"
+        {name: "PostregSQL", level: SkillLevel[4]},
+        {name: "SQLite", level: SkillLevel[3]},
+        {name: "FastAPI", level: SkillLevel[3]}
+    ],
+    DATASTRUCTURES: [
+        {name: "Algorithms and Datastructures", level: SkillLevel[3]}
     ]
 };
 
 
 
 
-async function show_skills(skills_name) {
-    let skills = Skills[skills_name];
+async function show_skills(category) {
 
-    for (let skill in skills) {
-        // Display skill button
+    // Get and clear the container
+    const container = document.getElementById("skills-container");
+    container.innerHTML = "";
+
+    // Get the skills of the category
+    const category_list = Skills[category];
+
+    // The category datastructures shows directly the skill level
+    if (category = "DATASTRUCTURES") {
+        category_list.forEach(skill => {
+
+            // Show the skill level
+            show_skill_level(skill)
+        })
+    }
+
+    // Other categories
+    else {
+
+        // Create and show the skill section
+        category_list.forEach(skill => {
+
+            // Create a button
+            const button = document.createElement("button");
+            button.className = "skill_item";
+            button.textContenh3t = skill.name;
+            button.onclick = () => show_skill_level(skill);
+
+            // Show the button
+            container.appendChild(button);
+
+        });
     }
 }
 
 
-async function show_skill_level(skill_name) {
-    let skill_level = SkillLevel[skill_name]
+async function show_skill_level(skill) {
+    const output = document.getElementById("skill_level");
+    output.innerHTML = `
+        <div class="skill_level_box">
+            <h3>$(skill.name)</h3>
+            <p>Level: <strong>$(skill.level)</strong></p>
+        </div>
+    `;
 
-    // Display skill level
 }

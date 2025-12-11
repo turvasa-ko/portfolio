@@ -42,35 +42,40 @@
         
         <!-- Skill buttons -->
         <div id="skill_buttons">
-            <button class="skill_button" id="programming_languages" onclick="show_skills('PROGRAMMING_LANGUAGES')">Programming Languages</button>
-            <button class="skill_button" id="languages"             onclick="show_skills('LANGUAGES')">Languages</button>
-            <button class="skill_button" id="frameworks"            onclick="show_skills('FRAMEWORKS')">Frameworks</button>
+            <button class="skill_button" id="programming_languages_button" onclick="show_skills('PROGRAMMING_LANGUAGES')">Programming Languages</button>
+            <button class="skill_button" id="languages_button"             onclick="show_skills('LANGUAGES')">Languages</button>
+            <button class="skill_button" id="frameworks_button"            onclick="show_skills('FRAMEWORKS')">Frameworks</button>
+            <button class="skill_button" id="datastructures"               onclick="show_skill_level">Algorithms and Datastructures</button>
         </div>
 
         <!-- Hidden programming language buttons -->
         <div class="hidden" id="programming_languages">
-            <button class="skill_button" id="python"   onclick="show_skill_level('PYTHON')">Python</button>
-            <button class="skill_button" id="java"     onclick="show_skill_level('JAVA')">Java</button>
-            <button class="skill_button" id="rust"     onclick="show_skill_level('RUST')">Rust</button>
-            <button class="skill_button" id="assembly" onclick="show_skill_level('ASSEMBLY')">Assembly (Y86)</button>
-            <button class="skill_button" id="js"       onclick="show_skill_level('JS')">JavaScript</button>
-            <button class="skill_button" id="html"     onclick="show_skill_level('HTML')">HTML</button>
+            <button class="skill_item" id="python"   onclick="show_skill_level('PYTHON')">Python</button>
+            <button class="skill_item" id="java"     onclick="show_skill_level('JAVA')">Java</button>
+            <button class="skill_item" id="rust"     onclick="show_skill_level('RUST')">Rust</button>
+            <button class="skill_item" id="assembly" onclick="show_skill_level('ASSEMBLY')">Assembly (Y86)</button>
+            <button class="skill_item" id="js"       onclick="show_skill_level('JS')">JavaScript</button>
+            <button class="skill_item" id="html"     onclick="show_skill_level('HTML')">HTML</button>
         </div>
 
         <!-- Hidden laguage buttons -->
         <div class="hidden" id="languages">
-            <button class="skill_button" id="finnish" onclick="show_skill_level('FINNISH')">Finnish</button>
-            <button class="skill_button" id="english" onclick="show_skill_level('ENGLISH')">English</button>
-            <button class="skill_button" id="sweden"  onclick="show_skill_level('SWEDISH')">Swedish</button>
-            <button class="skill_button" id="arabic"  onclick="show_skill_level('ARABIC')">Arabic</button>
+            <button class="skill_item" id="finnish" onclick="show_skill_level('FINNISH')">Finnish</button>
+            <button class="skill_item" id="english" onclick="show_skill_level('ENGLISH')">English</button>
+            <button class="skill_item" id="sweden"  onclick="show_skill_level('SWEDISH')">Swedish</button>
+            <button class="skill_item" id="arabic"  onclick="show_skill_level('ARABIC')">Arabic</button>
         </div>
 
         <!-- Hidden framework buttons -->
         <div class="hidden" id="frameworks">
-            <button class="skill_button" id="posgresql">Postgre SQL</button>
-            <button class="skill_button" id="sqlite">SQLite</button>
-            <button class="skill_button" id="fastapi">FastAPI</button>
+            <button class="skill_item" id="posgresql">Postgre SQL</button>
+            <button class="skill_item" id="sqlite">SQLite</button>
+            <button class="skill_item" id="fastapi">FastAPI</button>
         </div>
+
+        <!-- Skill container -->
+         <div id="skill_container"></div>
+         <div id="skill_level"></div>
 
     </section>
 

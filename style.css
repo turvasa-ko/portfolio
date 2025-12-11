@@ -117,7 +117,6 @@ section h2::after {
 #skill_buttons,
 .hidden {
     margin-top: 10px;
-    display: None;
 }
 
 .skill_button {
@@ -135,6 +134,10 @@ section h2::after {
 .skill_button:hover {
     background: #334155;
     transform: scale(1.05);
+}
+
+.hidden {
+    display: None;
 }
 
 
