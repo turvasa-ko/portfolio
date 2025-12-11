@@ -81,7 +81,7 @@ async function show_skills(category) {
             // Create a button
             const button = document.createElement("button");
             button.className = "skill_item";
-            button.textContenh3t = skill.name;
+            button.textContent = skill.name;
             button.onclick = () => show_skill_level(skill);
 
             // Show the button

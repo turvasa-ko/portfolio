@@ -8,7 +8,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #e2e8f0;
     line-height: 1.6;
 }
@@ -36,6 +40,7 @@ header p {
 }
 
 
+
 /* ------ Links ------- */
 a {
     color: #38bdf8;
@@ -47,6 +52,7 @@ a:hover {
 }
 
 
+
 /* ------ Navigation ------- */
 
 nav {
@@ -56,8 +62,8 @@ nav {
 nav .button {
     margin: 6px;
     padding: 10px 20px;
-    border-radius: 10px;
-    background: #1e40af;
+    border-radius: 90px;
+    background: linear-gradient(90deg, #f6f33b90, #44d40690);
     color: white;
     border: none;
     cursor: pointer;
@@ -66,9 +72,10 @@ nav .button {
 }
 
 nav .button:hover {
-    background: #3b82f6;
+    background: linear-gradient(150deg, #f6f33bc0, #44d406c0);
     transform: translate(-3px);
 }
+
 
 
 /* ------ Sections ------ */
@@ -77,10 +84,10 @@ section {
     width: 70%;
     margin: 60px auto;
     padding: 80px 10%;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 25px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 0, 38, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
     transition: 0.25 ease;
     position: relative;
@@ -105,14 +112,18 @@ section h2::after {
     display: block;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    background: linear-gradient(90deg, #d7f63b, #06d41b);
     display: block;
     margin-top: 6px;
     border-radius: 4px;
 }
 
 
+
 /* ------ Skill section ------- */
+
+
+/* -- Skill buttons -- */
 
 #skill_buttons,
 .hidden {
@@ -123,7 +134,7 @@ section h2::after {
     margin: 8px;
     padding: 10px 18px;
     border-radius: 8px;
-    background: #1e293b;
+    background: linear-gradient(90deg, #3b83f686, #06d4bc82);
     color: #f1f5f9;
     border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
@@ -132,13 +143,43 @@ section h2::after {
 }
 
 .skill_button:hover {
-    background: #334155;
+    background: linear-gradient(1500deg, #3b83f6c0, #06d4bcc0);
     transform: scale(1.05);
 }
 
 .hidden {
     display: None;
 }
+
+
+/* -- Skill container -- */
+
+#skill_container {
+    margin-top: 20px;
+}
+
+.skill_item {
+    margin: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.skill_item:hover {
+    background: #334155;
+    transform: scale(1.05);
+}
+
+.skill_level {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
 
 
 /* ------ Project section ------ */
@@ -164,6 +205,7 @@ section h2::after {
 }
 
 
+
 /* ------ Buttons ------- */
 .button {
     padding: 10px 20px;
@@ -183,6 +225,7 @@ section h2::after {
 }
 
 
+
 /* ------ Contact section ------- */
 
 .contact p {
@@ -192,6 +235,7 @@ section h2::after {
 .social_links .button {
     margin-top: 10px;
 }
+
 
 
 /* ------- Footer ------- */

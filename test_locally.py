@@ -1,6 +1,5 @@
 import http.server
 import socketserver
-import subprocess
 
 PORT = 9000
 Handler = http.server.SimpleHTTPRequestHandler
