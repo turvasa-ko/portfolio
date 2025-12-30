@@ -137,7 +137,7 @@ section h2::after {
     margin: 8px;
     padding: 10px 18px;
     border-radius: 8px;
-    background: linear-gradient(90deg, #3b83f686, #06d4bc82);
+    background: linear-gradient(90deg, rgba(0, 200, 255, 0.6), rgba(0, 255, 200, 0.6));
     color: #f1f5f9;
     border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
@@ -146,7 +146,7 @@ section h2::after {
 }
 
 .skill_button:hover {
-    background: linear-gradient(1500deg, #3b83f6c0, #06d4bcc0);
+    background: linear-gradient(1500deg, rgba(0, 200, 255, 0.8), rgba(0, 255, 200, 0.8));
     transform: scale(1.05);
 }
 
@@ -188,22 +188,22 @@ section h2::after {
 /* ------ Project section ------ */
 
 .project {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(108, 177, 255, 0.08);
     padding: 25px;
     border-radius: 15px;
     margin-bottom: 25px;
     transition: 0.25s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(256, 255, 255, 0.1);
 }
 
 .project:hover {
     transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(108, 177, 255, 0.15);
 }
 
 .project h3 {
     font-size: 1.4rem;
-    color: #93c5fd;
+    color: rgba(0, 238, 255, 0.8);
     margin-bottom: 8px;
 }
 
@@ -212,7 +212,7 @@ section h2::after {
 /* ------ Buttons ------- */
 .button {
     padding: 10px 20px;
-    background: #2563ed;
+    background: rgba(0, 238, 255, 0.6);
     color: white;
     border: none;
     border-radius: 10px;
@@ -223,7 +223,7 @@ section h2::after {
 }
 
 .button:hover {
-    background: #3b82f6;
+    background: rgba(0, 238, 255);
     transform: translate(-3px);
 }
 

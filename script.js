@@ -57,7 +57,7 @@ const Skills = {
 async function show_skills(category) {
 
     // Get and clear the container
-    const container = document.getElementById("skills-container");
+    const container = document.getElementById("skill_container");
     container.innerHTML = "";
 
     // Get the skills of the category
@@ -82,7 +82,7 @@ async function show_skills(category) {
             const button = document.createElement("button");
             button.className = "skill_item";
             button.textContent = skill.name;
-            button.onclick = () => show_skill_level(skill);
+            button.onmouseover = () => show_skill_level(skill);
 
             // Show the button
             container.appendChild(button);
