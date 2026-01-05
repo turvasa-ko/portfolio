@@ -1,4 +1,9 @@
 
+// ---------------
+//  Skill section
+// ---------------
+
+
 const SkillLevel = {
     1: "Fluent",
     2: "Advanced",
@@ -27,7 +32,7 @@ const Language = {
 
 
 const Skills = {
-    PROGRAMMING_LANGUAGE: [
+    PROGRAMMING_LANGUAGES: [
         {name: "Python", level: SkillLevel[3]},
         {name: "Java", level: SkillLevel[2]},
         {name: "Rust", level: SkillLevel[4]},
@@ -35,14 +40,14 @@ const Skills = {
         {name: "JavaScript", level: SkillLevel[4]},
         {name: "HTML", level: SkillLevel[4]}
     ],
-    LANGUAGE: [
+    LANGUAGES: [
         {name: "Finnish", level: SkillLevel[1]},
         {name: "English", level: SkillLevel[3]},
         {name: "Swedish", level: SkillLevel[4]},
-        {name: "Arabics", level: SkillLevel[5]}
+        {name: "Arabic", level: SkillLevel[5]}
     ],
-    FRAMEWORK: [
-        {name: "PostregSQL", level: SkillLevel[4]},
+    FRAMEWORKS: [
+        {name: "PostgreSQL", level: SkillLevel[4]},
         {name: "SQLite", level: SkillLevel[3]},
         {name: "FastAPI", level: SkillLevel[3]}
     ],
@@ -54,7 +59,7 @@ const Skills = {
 
 
 
-async function show_skills(category) {
+function show_skills(category) {
 
     // Get and clear the container
     const container = document.getElementById("skill_container");
@@ -63,8 +68,18 @@ async function show_skills(category) {
     // Get the skills of the category
     const category_list = Skills[category];
 
+    // Remove button selection
+    const allSkillButtons = document.querySelectorAll("#skill_button .skill_button");
+    allSkillButtons.forEach(button => button.classList.remove("selected"))
+
+    // Add button selection
+    const clickedButton = document.getElementById(category.toLowerCase() + "_button");
+    if (clickedButton) {
+        clickedButton.classList.add("selected")
+    }
+
     // The category datastructures shows directly the skill level
-    if (category = "DATASTRUCTURES") {
+    if (category == "DATASTRUCTURES") {
         category_list.forEach(skill => {
 
             // Show the skill level
@@ -92,13 +107,36 @@ async function show_skills(category) {
 }
 
 
-async function show_skill_level(skill) {
+function show_skill_level(skill) {
     const output = document.getElementById("skill_level");
     output.innerHTML = `
-        <div class="skill_level_box">
-            <h3>$(skill.name)</h3>
-            <p>Level: <strong>$(skill.level)</strong></p>
+        <div class="skill_level">
+            <h3>${skill.name}</h3>
+            <p>Level: <strong>${skill.level}</strong></p>
         </div>
     `;
 
 }
+
+document.getElementById("skill_levele").output.innerHTML = "";
+
+
+
+
+
+// -----------------
+//  Contact section
+// -----------------
+
+document.querySelectorAll('.contact_item img').forEach(img => {
+    const originalSrc = img.src;
+    const hoverSrc = originalSrc.replace(".png", "_hover.png");
+
+    img.addEventListener('mouseenter', () => {
+        img.src = hoverSrc;
+    });
+
+    img.addEventListener('mouseleave', () => {
+        img.src = originalSrc;
+    });
+});

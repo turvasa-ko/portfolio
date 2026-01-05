@@ -1,107 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
     <!-- Head -->
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tatu Tallavaara - Portfolio</title>
+        <title>Tatu Tallavaara</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
     </head>
 
 
+    <!-- Body -->
+    <body>
 
-    <!-- Headers -->
-    <header>
-        <h1>Tatu Tallavaara</h1>
-        <p>Computer Science student | Cybersecurity</p>
-        <nav>
-            <button class="button" href="#about">About</button>
-            <button class="button" href="#skills">Skills</button>
-            <button class="button" href="#projects">Projects</button>
-            <button class="button" href="#contact">Contact</button>
-        </nav>
-    </header>
+        <!-- Headers -->
+        <header>
+            <h1>Tatu Tallavaara</h1>
+        </header>
 
+        <!-- Buttons -->
+        <main class="navigation_buttons">
+            <a class="button portfolio" href="portfolio.html">Portfolio</a>
+            <a class="button cv" href="cv.html">CV</a>
+        </main>
 
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Tatu Tallavaara</p>
+        </footer>
 
-    <!-- About Me -section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            3rd year Computer Science student from University of Oulu 
-            focusing on cybersecurity
-        </p>
-    </section>
-
-
-    <!-- Skills -section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        
-        <!-- Skill buttons -->
-        <div id="skill_buttons">
-            <button class="skill_button" id="programming_languages_button" onclick="show_skills('PROGRAMMING_LANGUAGES')">Programming Languages</button>
-            <button class="skill_button" id="languages_button"             onclick="show_skills('LANGUAGES')">Languages</button>
-            <button class="skill_button" id="frameworks_button"            onclick="show_skills('FRAMEWORKS')">Frameworks</button>
-            <button class="skill_button" id="datastructures"               onclick="show_skills('DATASTRUCTURES')">Algorithms and Datastructures</button>
-        </div>
-        
-        <!-- Skill container -->
-         <div id="skill_container"></div>
-         <div id="skill_level"></div>
-
-    </section>
-
-
-
-    <!-- My Projects -section -->
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Meme Database</h3>
-            <p>
-                Stores memes including tags to a database. The memes can 
-                be searched by tags and by the title or the id of the meme.
-            </p>
-            <button class="button" onclick="window.open('https://github.com/turvasa-ko/meme-database', '_blank');">Repository</button>
-        </div>
-
-        <div class="project">
-            <h3>YO-prep</h3>
-            <p>
-                Can be used to practise Finnish matriculation examinations. After
-                giving the answer an AI will evaluate it using the "good
-                answer fundamentals". The answers and grade/points will
-                be stored to a database, where the user can look them up.
-            </p>
-            <button class="button" onclick="window.open('https://github.com/turvasa-ko/yo-prep', '_blank');">Repository</button>
-        </div>
-    </section>
-
-
-
-    <!-- Contact Me -section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact">
-            <p>Email: </p><a href="url">tatu.tallavaara@gmail.com</a><br>
-
-            <p>Phone Num: +358 40 935 9252</p>
-        </div>
-
-        <div class="social_links">
-            <button class="button" onclick="window.open('https://github.com/turvasa-ko', '_blank');">GitHub</button><br>
-            <button class="button" onclick="window.open('https://www.linkedin.com/in/tatu-tallavaara-106410228/', '_blank');">LinkedIn</button>
-        </div>
-    </section>
-
-
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Tatu Tallavaara</p>
-    </footer>
+    </body>
 </html>
