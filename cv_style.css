@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 390px;
+    scroll-padding-top: 420px;
 }
 
 body {
@@ -75,6 +75,8 @@ header {
     transform: translateY(-2px) scale(1.1);
 }
 
+
+/* -- Links -- */
 .contact_column a {
     color: #d9f99d;
     text-decoration: none;
@@ -83,6 +85,20 @@ header {
 
 .contact_column:hover a {
     color: #f6f33b;
+    text-decoration: underline;
+}
+
+#education a {
+    color: #2d8c05;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.25s ease;
+}
+
+#education .info:hover a {
+    padding-top: -200px;
+    color: #34472c;
+    transform: translateY(-2px) scale(1.1);
     text-decoration: underline;
 }
 
@@ -177,10 +193,10 @@ nav .button:hover {
 section {
     width: 50%;
     min-width: 1000px;
-    margin: 140px auto;
-    padding: 80px 10%;
+    margin: 50px auto;
+    padding: 80px 8%;
+    border-radius: 10px;
     background: whitesmoke;
-    border-radius: 25px;
     backdrop-filter: blur(10px);
     border: 3px solid #34472c;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
@@ -261,6 +277,61 @@ section p {
 }
 
 
+
+/* --- Skill section --- */
+
+ul {
+    margin: 20px 20px;
+    list-style: none;
+}
+
+li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #44d406;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.languages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.language_row {
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 10px 30px;
+    gap: 20px;
+    background-color: #b5ea9f80;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 2px solid #34472ca0;
+    transition: all 0.25s ease;
+}
+
+.language_row:hover {
+    background-color: #b5ea9fb0;
+    transform: scale(1.05);
+}
+
+.language_column {
+    flex: 1;
+}
 
 
 
