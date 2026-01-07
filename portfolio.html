@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="portfolio_style.css">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </head>
 
 
@@ -18,19 +18,33 @@
     <!-- Headers -->
     <header>
 
-        <a href="index.html" class="icon">
-            <img src="icons/home.png" alt="Home">
-        </a>
+        <div class="row">
 
-        <h1>Tatu Tallavaara</h1>
-        <p>Computer Science student | Cybersecurity</p>
+            <!-- Column 1-->
+            <div class="column">
+                <a href="index.html" class="icon">
+                    <img src="icons/home.png">
+                </a>
 
-        <nav>
-            <a class="button" href="#about">About</a>
-            <a class="button" href="#skills">Skills</a>
-            <a class="button" href="#projects">Projects</a>
-            <a class="button" href="#contact">Contact</a>
-        </nav>
+                <h1>Tatu E. Tallavaara</h1>
+                <p>Computer Science student | Cybersecurity</p>
+
+                <nav>
+                    <a class="button" href="#about">About</a>
+                    <a class="button" href="#skills">Skills</a>
+                    <a class="button" href="#projects">Projects</a>
+                    <a class="button" href="#story">Story</a>
+                    <a class="button" href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="column">
+                <div class="profile_image">
+                    <img src="images/profile_old.png">
+                </div>
+            </div>
+        </div>
     </header>
 
 
@@ -42,8 +56,9 @@
         <section id="about">
             <h2>About Me</h2>
             <p>
-                3rd year Computer Science student from University of Oulu 
-                focusing on cybersecurity
+                Hey there! I'm Tatu, a 3rd-year Computer Science student at the University of Oulu 
+                focusing on Cybersecurity, yet I'm always curious about AI, software development and new 
+                technologies. Take a quick look at my projects and skills to see what I'm passionate about!
             </p>
         </section>
 
@@ -55,9 +70,9 @@
             <!-- Skill buttons -->
             <div id="skill_buttons">
                 <button class="skill_button" id="programming_languages_button" onclick="show_skills('PROGRAMMING_LANGUAGES')">Programming Languages</button>
-                <button class="skill_button" id="languages_button"             onclick="show_skills('LANGUAGES')">Languages</button>
                 <button class="skill_button" id="frameworks_button"            onclick="show_skills('FRAMEWORKS')">Frameworks</button>
-                <button class="skill_button" id="datastructures"               onclick="show_skills('DATASTRUCTURES')">Algorithms and Datastructures</button>
+                <button class="skill_button" id="others_button"        onclick="show_skills('OTHERS')">Complementary Skills</button>
+                <button class="skill_button" id="languages_button"             onclick="show_skills('LANGUAGES')">Languages</button>
             </div>
             
             <!-- Skill container -->
@@ -65,7 +80,6 @@
             <div id="skill_level"></div>
 
         </section>
-
 
 
         <!-- My Projects -section -->
@@ -94,6 +108,23 @@
         </section>
 
 
+        <!-- My Story -section-->
+         <section id="story">
+            <h2>My Stroy</h2>
+            <p>
+                Ever since I was a child, I've been fascinated by technology. My first real exposure came in middle school, 
+                when we practiced to use computers and built simple circuits. This inspired me to choose optional subjects 
+                in high school like Computers Handcraft and Electricity Handcraft, where I first got to try coding.
+                We first started with trivial Arduino projects and Scratch games, and even though they were basic, I found 
+                them incredibly fun and rewarding.
+                <br><br>
+                In upper secondary school I was determined to take my first "real" coding class, when we had an optional 
+                course following the Elementary Programming course from the Univeristy of Oulu. At the time, it felt extremely 
+                challenging, but I stuck with it. Nowadays, coding is fun, but also quite addictive, and it continues to 
+                drive my curiosity and passion for building new projects.
+            </p>
+         </section>
+
 
         <!-- Contact Me -section -->
         <section id="contact">
@@ -108,7 +139,7 @@
                 </a>
 
                 <!-- Phone -->
-                <a href="tel:+358409359525" class="contact_item">
+                <a class="contact_item">
                     <img src="icons/phone.png" alt="Phone">
                     +358 40 935 9525
                 </a>
@@ -126,7 +157,6 @@
                  </a>
             </div>
         </section>
-
 
 
         <!-- Footer -->

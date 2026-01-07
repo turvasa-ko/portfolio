@@ -8,7 +8,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 330px;
+    scroll-padding-top: 370px;
 }
 
 body {
@@ -23,15 +23,37 @@ body {
 
 header {
     position: sticky;
+    height: 380px;
     top: 0;
     z-index: 1000;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 60px;
     background: linear-gradient(135deg, #1e293b, #0f172a);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid rgba(255, 255, 255, 0.05);
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18%;
+    gap: 40px;
+}
+.column {
+    max-width: 40%;
+    flex: 1;
+}
+.column:first-child {
+    margin-top: -40px;
+}
+.column:last-child {
+    margin-top: -20px;
+}
+
+
+/* --- Home Icon --- */
 .icon {
     position: absolute;
     top: 10px;
@@ -52,6 +74,29 @@ header {
     transform: scale(1.1);
 }
 
+
+/* --- Profile picture --- */
+.profile_image {
+    display: block;
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.profile_image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s;
+}
+
+.profile_image img:hover {
+    content: url("images/profile_old-hover.png");
+    transform: scale(0.95);
+}
+
+
+/* --- Text --- */
 header h1 {
     font-size: 4rem;
     font-family: "Cinzel", serif;
@@ -66,27 +111,15 @@ header p {
 }
 
 
-
-/* ------ Links ------- */
-a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-
-/* ------ Navigation ------- */
+/* --- Navigation --- */
 
 nav {
     margin-top: 20px;
 }
 
 nav .button {
-    margin: 6px;
+    display: inline-block;
+    margin: 0.5%;
     padding: 10px 20px;
     border-radius: 90px;
     background: linear-gradient(90deg, #f6f33b90, #44d40690);
@@ -94,38 +127,30 @@ nav .button {
     border: none;
     cursor: pointer;
     font-weight: 600;
-    transition: 0.25 ease;
+    transition: transform 0.25s ease;
+    text-decoration: none;
 }
 
 nav .button:hover {
     background: linear-gradient(150deg, #f6f33bc0, #44d406c0);
-    transform: translate(-3px);
+    transform: translateY(-3px) scale(1.1);
 }
 
 
 
 /* ------ Sections ------ */
 
-@media (max-width: 768px) {
-    section {
-        width: 90%;
-        padding: 40px 5%;
-    }
-}
-
-
 section {
     width: 50%;
-    min-width: 1500px;
-    margin: 100px auto;
-    margin-top: 40px;
+    min-width: 1000px;
+    margin: 140px auto;
     padding: 80px 10%;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 25px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 38, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-    transition: 0.25 ease;
+    transition: all 0.25s ease;
     position: relative;
 }
 
@@ -156,62 +181,59 @@ section h2::after {
 
 section p {
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 
 
 /* ------ Skill section ------- */
 
+#skill_buttons, #skill_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+
 
 /* -- Skill buttons -- */
 
 .skill_button {
-    margin: 8px;
-    padding: 10px 18px;
-    border-radius: 8px;
-    background: linear-gradient(90deg, rgba(0, 200, 255, 0.6), rgba(0, 255, 200, 0.6));
-    color: #f1f5f9;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9rem;
+    padding: 10px 18px; 
+    border-radius: 8px; 
+    background: linear-gradient(90deg, rgba(0, 200, 255, 0.6), rgba(0, 255, 200, 0.6)); 
+    color: #f1f5f9; 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    cursor: pointer; 
+    font-weight: 600; 
+    font-size: 0.9rem; 
     transition: 0.25s ease;
 }
 
 .skill_button.selected {
-    border: 2px whitesmoke;
-
-}
-
-#skill_button {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
 }
 
 .skill_button:hover {
-    background: linear-gradient(1500deg, rgba(0, 200, 255, 0.8), rgba(0, 255, 200, 0.8));
+    background: linear-gradient(150deg, rgba(0, 200, 255, 0.8), rgba(0, 255, 200, 0.8));
     transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.025);
 }
 
 
 /* -- Skill container -- */
 
-#skill_container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 .skill_item {
-    margin: 8px;
-    padding: 10px 18px;
-    border-radius: 8px;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 14px;
     background: #1e293b;
     color: white;
     cursor: pointer;
-    transition: 0.25s ease;
+    transition: all 0.25s ease;
+    font-weight: 600;
 }
 
 .skill_item:hover {
@@ -220,10 +242,57 @@ section p {
 }
 
 .skill_level {
+    width: 600px;
+    margin: 20px auto;
     margin-top: 20px;
     padding: 15px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 10px;
+}
+
+.skill_level h3 {
+    font-size: 1.4rem;
+    color: whitesmoke;
+}
+
+.skill_level img {
+    width: 105px;
+    height: 75px;
+    margin: 10px 0;
+    animation: fadeIn 0.3s ease;
+}
+
+.skill_level_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill_badge {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.skill_meter {
+    width: 220px;
+    margin-top: 10px;
+}
+
+/* -- Skill level animation --*/
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -287,30 +356,39 @@ section p {
 
 
 .contact_item {
+    color: #0fe;
     display: flex;
     align-items: center;
     text-decoration: none;
     gap: 8px;
     transition: transform 0.25s;
+    padding-left: 20px;
 }
 
 
 .contact_item:hover {
     color: whitesmoke;
     transform: scale(1.1);
+    text-decoration: underline;
 }
 
 
 .contact_item img {
     width: 48px;
     height: 48px;
+    transition: transform 0.25s;
+}
+
+.contact_item:hover img {
+    transform: scale(1.1);
 }
 
 
 /* ------- Footer ------- */
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    width: 100%;
     background: linear-gradient(135deg, #1e293b, #0f172a);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     border-top: 2px solid rgba(255, 255, 255, 0.05);

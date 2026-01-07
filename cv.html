@@ -6,97 +6,286 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tatu Tallavaara - CV</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="cv_style.css">
     </head>
 
 
 
-    <!-- Headers -->
+    
+    <!-- Header -->
     <header>
-        <h1>Tatu Tallavaara</h1>
-        <p>Computer Science student | Cybersecurity</p>
-        <nav>
-            <button class="button" href="#about">About</button>
-            <button class="button" href="#skills">Skills</button>
-            <button class="button" href="#projects">Projects</button>
-            <button class="button" href="#contact">Contact</button>
-        </nav>
+
+        <div class="row">
+
+            <div class="column">
+                <a href="index.html" class="icon">
+                    <img src="icons/home_hover.png">
+                </a>
+
+                <h1>Tatu E. Tallavaara</h1>
+                
+                <nav>
+                    <a class="button" href="#education">Education</a>
+                    <a class="button" href="#work">Work Experience</a>
+                    <a class="button" href="#skills">Skills</a>
+                </nav>
+            </div>
+
+            <div class="column">
+                <div class="profile_image">
+                    <img src="images/profile_young.png">
+                </div>
+            </div>
+                    </div>
+
+        <div class="row">
+
+            <!-- Address -->
+            <div class="contact_column">Paalikatu 9 A 17, Oulu, 90520</div>
+
+            <!-- Email -->
+            <div class="contact_column">
+                <a href="mailto:tatu.tallavaara@gmail.com">tatu.tallavaara@gmail.com</a>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact_column">+358 40 935 9525</div>
+
+            <!-- GitHub -->
+            <div class="contact_column">
+                <a href="https://github.com/turvasa-ko" class="contact_item" target="_blank">
+                    <img 
+                        src="icons/cv-github.png" 
+                        alt="GitHub"
+                        onmouseover="this.src='icons/cv-github_hover.png';"
+                        onmouseout="this.src='icons/cv-github.png';"
+                    >
+                </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact_column">
+                <a href="https://www.linkedin.com/in/tatu-tallavaara-106410228/" class="contact_item" target="_blank">
+                    <img 
+                        src="icons/cv-linkedin.png" 
+                        alt="LinkedIn"
+                        onmouseover="this.src='icons/cv-linkedin_hover.png';"
+                        onmouseout="this.src='icons/cv-linkedin.png';"
+                    >
+                </a>
+            </div>
+        </div>
+
     </header>
 
 
 
-    <!-- About Me -section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            3rd year Computer Science student from University of Oulu 
-            focusing on cybersecurity
-        </p>
-    </section>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Education section -->
+        <section id="education">
+            <h2>Education</h2>
+            <a href="https://opintopolku.fi/koski/opinnot/2c82088e33174a5797b3c4510c61a45d" target="_blank">My Studyinfo</a>
+            
+            <!-- University -->
+            <div class="info">
+
+                <!-- Info -->
+                <div class="info_row">
+                    <div class="info_column">
+                        <h3>Bachelor's degree of Computer Science, University of Oulu</h3>
+                    </div>
+                    
+                    <div class="info_column">
+                        <h4>2023-(2026)</h4>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="info_row">
+                    <p>
+                        Gained strong foundations in <u>programming</u>, <u>mathematics</u> and 
+                        <u>data structures</u>. Currently exploring <u>Cybersecurity</u> as a 
+                        focus for my master’s studies.
+                    </p>
+                </div>
+            </div>
 
 
-    <!-- Skills -section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        
-        <!-- Skill buttons -->
-        <div id="skill_buttons">
-            <button class="skill_button" id="programming_languages_button" onclick="show_skills('PROGRAMMING_LANGUAGES')">Programming Languages</button>
-            <button class="skill_button" id="languages_button"             onclick="show_skills('LANGUAGES')">Languages</button>
-            <button class="skill_button" id="frameworks_button"            onclick="show_skills('FRAMEWORKS')">Frameworks</button>
-            <button class="skill_button" id="datastructures"               onclick="show_skills('DATASTRUCTURES')">Algorithms and Datastructures</button>
-        </div>
-        
-        <!-- Skill container -->
-         <div id="skill_container"></div>
-         <div id="skill_level"></div>
+            <!-- Upper Secondary school -->
+            <div class="info">
 
-    </section>
+                <!-- Info -->
+                <div class="info_row">
+                    <div class="info_column">
+                        <h3>Keminmaan lukio</h3>
+                    </div>
+                    
+                    <div class="info_column">
+                        <h4>2019-2022</h4>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="info_row">
+                    <p>
+                        Matriculation Exam scores:  Mathematics(L), Physics(E), Chemistry(E)
+                    </p>
+                </div>
+            </div>
+        </section>
 
 
 
-    <!-- My Projects -section -->
-    <section id="projects">
-        <h2>Projects</h2>
+        <!-- Work Experience -->
+         <section id="work">
+            <h2>Work Experience</h2>
 
-        <div class="project">
-            <h3>Meme Database</h3>
-            <p>
-                Stores memes including tags to a database. The memes can 
-                be searched by tags and by the title or the id of the meme.
+            <!-- Di Mare -->
+            <div class="info">
+
+                <!-- Info -->
+                <div class="info_row">
+                    <div class="info_column">
+                        <h3>Pizzeria Di Mare – Cashier / Pizza driver</h3>
+                    </div>
+                    
+                    <div class="info_column">
+                        <h4>Kemi (2022, June – November and 2025, May - December)</h4>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="info_row">
+                    <p>
+                        Managed customer service tasks, including taking orders and serving meals 
+                        in the restaurant. Delivered orders promptly and ensured customer 
+                        satisfaction during deliveries. 
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Selecta -->
+            <div class="info">
+
+                <!-- Info -->
+                <div class="info_row">
+                    <div class="info_column">
+                        <h3>Selecta – Coffee Machine Maintenance Technician</h3>
+                    </div>
+                    
+                    <div class="info_column">
+                        <h4>Keminmaa (2024, May - August)</h4>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="info_row">
+                    <p>
+                        Responsible for cleaning, maintaining, and servicing coffee machines at 
+                        client locations. Provided customer service by addressing client needs 
+                        with professionalism and courtesy. 
+                    </p>
+                </div>
+            </div>
+
+
+
+            <!-- Kivikon koulu -->
+            <div class="info">
+
+                <!-- Info -->
+                <div class="info_row">
+                    <div class="info_column">
+                        <h3>Kivikon koulu - Substitute teacher</h3>
+                    </div>
+                    
+                    <div class="info_column">
+                        <h4>Kemi (2022 March – 2023 December)</h4>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="info_row">
+                    <p>
+                        Taught and managed classes for both primary and high school students during 
+                        short-term assignments, typically lasting one week. Adapted to various 
+                        subjects and maintained a disciplined and engaging learning environment. 
+                    </p>
+                </div>
+            </div>
+         </section>
+
+
+
+        <!-- Skills -->
+        <section id="skills">
+
+            <!-- Technical -->
+            <h2>Skills</h2>
+
+            <ul class="skills">
+                <li>
+                    Proficient in Python and Java, with working knowledge of Rust, JavaScript,
+                    HTML and Assembly
+                </li>
+                <li>
+                    Experience with algorithms and datastructures, Linux environments and Git
+                </li>
+                <li>
+                    Backend development usingusing FastAPI with PostgreSQL and SQLite
+                </li>
+                <li>
+                    System optimatization, debugging and testing to improve performance and reliability
+                </li>
             </p>
-            <button class="button" onclick="window.open('https://github.com/turvasa-ko/meme-database', '_blank');">Repository</button>
-        </div>
-
-        <div class="project">
-            <h3>YO-prep</h3>
-            <p>
-                Can be used to practise Finnish matriculation examinations. After
-                giving the answer an AI will evaluate it using the "good
-                answer fundamentals". The answers and grade/points will
-                be stored to a database, where the user can look them up.
-            </p>
-            <button class="button" onclick="window.open('https://github.com/turvasa-ko/yo-prep', '_blank');">Repository</button>
-        </div>
-    </section>
 
 
+            <!-- Languages -->
 
-    <!-- Contact Me -section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact">
-            <p>Email: </p><a href="url">tatu.tallavaara@gmail.com</a><br>
+            <!-- Finnish -->
+            <div class="language_row">
+                <div class="language_column">Finnish</div>
 
-            <p>Phone Num: +358 40 935 9252</p>
-        </div>
+                <div class="language_column">
+                    <img src="images/language_meter_1.png">
+                </div>
+            </div>
 
-        <div class="social_links">
-            <button class="button" onclick="window.open('https://github.com/turvasa-ko', '_blank');">GitHub</button><br>
-            <button class="button" onclick="window.open('https://www.linkedin.com/in/tatu-tallavaara-106410228/', '_blank');">LinkedIn</button>
-        </div>
-    </section>
+
+            <!-- English -->
+            <div class="language_row">
+                <div class="language_column">English</div>
+
+                <div class="language_column">
+                    <img src="images/language_meter_2.png">
+                </div>
+            </div>
+ 
+
+            <!-- Swedish-->
+            <div class="language_row">
+                <div class="language_column">Swedish</div>
+
+                <div class="language_column">
+                    <img src="images/language_meter_3.png">
+                </div>
+            </div>
+
+
+            <!-- Arabic -->
+            <div class="language_row">
+                <div class="language_column">Arabic</div>
+
+                <div class="language_column">
+                    <img src="images/language_meter_4.png">
+                </div>
+            </div>
+        </section>
+    </body>
 
 
 

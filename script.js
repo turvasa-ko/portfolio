@@ -12,25 +12,6 @@ const SkillLevel = {
     5: "Basics"
 };
 
-
-const Language = {
-    
-    // Programming languages
-    PYTHON:   SkillLevel[3],
-    JAVA:     SkillLevel[2],
-    RUST:     SkillLevel[4],
-    ASSEMBLY: SkillLevel[5],
-    JS:       SkillLevel[4],
-    HTML:     SkillLevel[4],
-
-    // Languages
-    FINNISH: SkillLevel[1],
-    ENGLISH: SkillLevel[3],
-    SWEDISH: SkillLevel[4],
-    ARABIC:  SkillLevel[5]
-};
-
-
 const Skills = {
     PROGRAMMING_LANGUAGES: [
         {name: "Python", level: SkillLevel[3]},
@@ -51,14 +32,16 @@ const Skills = {
         {name: "SQLite", level: SkillLevel[3]},
         {name: "FastAPI", level: SkillLevel[3]}
     ],
-    DATASTRUCTURES: [
-        {name: "Algorithms and Datastructures", level: SkillLevel[3]}
+    OTHERS: [
+        {name: "Algorithms and Datastructures", level: SkillLevel[3]},
+        {name: "Linux", level: SkillLevel[4]},
+        {name: "Git", level: SkillLevel[3]}
     ]
 };
 
 
 
-
+// Shows the skill button and highlights the skill category button
 function show_skills(category) {
 
     // Get and clear the container
@@ -69,58 +52,46 @@ function show_skills(category) {
     const category_list = Skills[category];
 
     // Remove button selection
-    const allSkillButtons = document.querySelectorAll("#skill_button .skill_button");
-    allSkillButtons.forEach(button => button.classList.remove("selected"))
+    document.querySelectorAll(".skill_button")
+        .forEach(button => button.classList.remove("selected"));
 
     // Add button selection
-    const clickedButton = document.getElementById(category.toLowerCase() + "_button");
-    if (clickedButton) {
-        clickedButton.classList.add("selected")
-    }
+    document.getElementById(category.toLowerCase() + "_button")
+        .classList.add("selected");
 
-    // The category datastructures shows directly the skill level
-    if (category == "DATASTRUCTURES") {
-        category_list.forEach(skill => {
+    // Create and show the skill section
+    category_list.forEach(skill => {
 
-            // Show the skill level
-            show_skill_level(skill)
-        })
-    }
+        // Create a button
+        const button = document.createElement("button");
+        button.className = "skill_item";
+        button.textContent = skill.name;
+        button.onmouseover = () => show_skill_level(skill);
 
-    // Other categories
-    else {
+        // Show the button
+        container.appendChild(button);
 
-        // Create and show the skill section
-        category_list.forEach(skill => {
-
-            // Create a button
-            const button = document.createElement("button");
-            button.className = "skill_item";
-            button.textContent = skill.name;
-            button.onmouseover = () => show_skill_level(skill);
-
-            // Show the button
-            container.appendChild(button);
-
-        });
-    }
+    });
 }
 
 
+// Shows the skill level
 function show_skill_level(skill) {
     const output = document.getElementById("skill_level");
+    const levelIndex = Object.values(SkillLevel).indexOf(skill.level) + 1;
+
     output.innerHTML = `
         <div class="skill_level">
-            <h3>${skill.name}</h3>
-            <p>Level: <strong>${skill.level}</strong></p>
+            <div class="skill_level_header">
+                <h3>${skill.name}</h3>
+                <span class="skill_badge">${skill.level}</span>
+            </div>
+
+            <img src="images/meter_${levelIndex}.png" alt="${skill.level}" class="skill_meter">
         </div>
     `;
 
 }
-
-document.getElementById("skill_levele").output.innerHTML = "";
-
-
 
 
 
@@ -128,15 +99,17 @@ document.getElementById("skill_levele").output.innerHTML = "";
 //  Contact section
 // -----------------
 
-document.querySelectorAll('.contact_item img').forEach(img => {
-    const originalSrc = img.src;
+// Handles the icon changing for the hovering event
+document.querySelectorAll('.contact_item').forEach(item => {
+    const image = item.querySelector("img");
+    const originalSrc = image.src;
     const hoverSrc = originalSrc.replace(".png", "_hover.png");
 
-    img.addEventListener('mouseenter', () => {
-        img.src = hoverSrc;
+    item.addEventListener('mouseenter', () => {
+        image.src = hoverSrc;
     });
 
-    img.addEventListener('mouseleave', () => {
-        img.src = originalSrc;
+    item.addEventListener('mouseleave', () => {
+        image.src = originalSrc;
     });
 });
