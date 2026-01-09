@@ -6,9 +6,10 @@
 // Sets the padding value
 const header = document.querySelector("header");
 function setScrollPadding() {
+    const headerHeight = header.offsetHeight;
     document.documentElement.style.setProperty(
-        "--header-height",
-        "calc(${header.offsetHeight}+400)px"
+        '--header-height',
+        `calc(${headerHeight}px + 10px)`
     );
 }
 
