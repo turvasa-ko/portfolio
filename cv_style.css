@@ -7,7 +7,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 420px;
 }
 
 body {
@@ -23,11 +22,10 @@ body {
 
 header {
     position: sticky;
-    height: 380px;
     top: 0;
     z-index: 1000;
     text-align: center;
-    padding: 40px 60px;
+    padding: 0px 24px;
     background: #34472c;
     color: azure;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
@@ -50,12 +48,6 @@ header {
 .column {
     max-width: 40%;
     flex: 1;
-}
-.column:first-child {
-    margin-top: -40px;
-}
-.column:last-child {
-    margin-top: -20px;
 }
 
 
@@ -128,8 +120,8 @@ header {
 /* --- Profile picture --- */
 .profile_image {
     display: block;
-    width: 260px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
     overflow: hidden;
 }
@@ -148,7 +140,7 @@ header {
 
 /* --- Text --- */
 header h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Cinzel", serif;
     margin-bottom: 1px;
     font-weight: 800;
@@ -188,11 +180,13 @@ nav .button:hover {
 
 
 
+
 /* ------ Sections ------ */
 
 section {
-    width: 50%;
-    min-width: 1000px;
+    scroll-margin-top: var(--header-height);
+    width: 60%;
+    min-width: 900px;
     margin: 50px auto;
     padding: 80px 8%;
     border-radius: 10px;
@@ -202,6 +196,9 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
     transition: all 0.25s ease;
     position: relative;
+}
+:root {
+    --header-height: 200px;
 }
 
 section:hover {
@@ -309,11 +306,11 @@ li::before {
     margin-top: 30px;
 }
 
-.language_row {
-    max-width: 300px;
+.language_box {
+    width: 300px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     margin: 10px 30px;
     gap: 20px;
@@ -324,13 +321,26 @@ li::before {
     transition: all 0.25s ease;
 }
 
-.language_row:hover {
+.language_box:hover {
     background-color: #b5ea9fb0;
     transform: scale(1.05);
 }
 
-.language_column {
+.language_row {
+    margin-left: 12px;
     flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language_row .flag {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 180px;
+    width: 48px;
+    height: auto;
 }
 
 
@@ -338,14 +348,53 @@ li::before {
 /* ------- Footer ------- */
 footer {
     position: fixed;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     bottom: 0;
     width: 100%;
     background: #34472c;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     border-top: 2px solid rgba(255, 255, 255, 0.05);
     text-align: center;
-    padding: 10px;
+    padding: 6px;
     color: #94a3b8;
     margin-top: 60px;
     font-size: 0.9rem;
 }
+
+footer p {
+    grid-column: 2;
+    text-align: center;
+}
+
+
+/* --- Download --- */
+#download {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 3;
+    justify-self: end;
+    align-items: center;
+    right: 20px;
+    gap: 10px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: 2px solid #ffffff80;
+    transition: all 0.25s ease;
+    background-color: #b5ea9fa0;
+    color: white;
+    text-decoration: none;
+}
+
+#download:hover {
+    transform: translateX(-3px);
+    background-color: #b5ea9fc0;
+    border-color: whitesmoke
+}
+
+#download img {
+    flex-shrink: 0;
+    width: 32px;
+}
+

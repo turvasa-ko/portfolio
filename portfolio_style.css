@@ -8,7 +8,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 420px;
 }
 
 body {
@@ -23,11 +22,10 @@ body {
 
 header {
     position: sticky;
-    height: 380px;
     top: 0;
     z-index: 1000;
     text-align: center;
-    padding: 40px 60px;
+    padding: 0px 24px;
     background: linear-gradient(135deg, #1e293b, #0f172a);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid rgba(255, 255, 255, 0.05);
@@ -38,18 +36,13 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-left: 18%;
-    gap: 40px;
+    margin-left: 20%;
+    gap: 20px;
 }
+
 .column {
-    max-width: 40%;
+    max-width: 50%;
     flex: 1;
-}
-.column:first-child {
-    margin-top: -40px;
-}
-.column:last-child {
-    margin-top: -20px;
 }
 
 
@@ -78,8 +71,8 @@ header {
 /* --- Profile picture --- */
 .profile_image {
     display: block;
-    width: 260px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
     overflow: hidden;
 }
@@ -98,7 +91,7 @@ header {
 
 /* --- Text --- */
 header h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Cinzel", serif;
     margin-bottom: 1px;
     font-weight: 800;
@@ -121,6 +114,7 @@ nav .button {
     display: inline-block;
     margin: 0.5%;
     padding: 10px 20px;
+    margin-bottom: 20px;
     border-radius: 90px;
     background: linear-gradient(90deg, #f6f33b90, #44d40690);
     color: white;
@@ -141,8 +135,9 @@ nav .button:hover {
 /* ------ Sections ------ */
 
 section {
-    width: 50%;
-    min-width: 1000px;
+    scroll-margin-top:var(--header-height);
+    width: 60%;
+    min-width: 900px;
     margin: 140px auto;
     padding: 80px 10%;
     background: rgba(255, 255, 255, 0.05);
@@ -152,6 +147,9 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
     transition: all 0.25s ease;
     position: relative;
+}
+:root {
+    --header-height: 200px;
 }
 
 section:hover {

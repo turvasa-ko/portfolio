@@ -1,4 +1,23 @@
 
+// ----------------
+//  Scroll padding
+// ----------------
+
+// Sets the padding value
+const header = document.querySelector("header");
+function setScrollPadding() {
+    document.documentElement.style.setProperty(
+        "--header-height",
+        "calc(${header.offsetHeight}+400)px"
+    );
+}
+
+// Change the padding value
+window.addEventListener("load", setScrollPadding);
+window.addEventListener("resize", setScrollPadding);
+
+
+
 // ---------------
 //  Skill section
 // ---------------
@@ -33,7 +52,7 @@ const Skills = {
         {name: "FastAPI", level: SkillLevel[3]}
     ],
     OTHERS: [
-        {name: "Algorithms and Datastructures", level: SkillLevel[3]},
+        {name: "Algorithms and Data Structures", level: SkillLevel[3]},
         {name: "Linux", level: SkillLevel[4]},
         {name: "Git", level: SkillLevel[3]}
     ]
@@ -87,7 +106,7 @@ function show_skill_level(skill) {
                 <span class="skill_badge">${skill.level}</span>
             </div>
 
-            <img src="images/meter_${levelIndex}.png" alt="${skill.level}" class="skill_meter">
+            <img src="meters/meter_${levelIndex}.png" alt="${skill.level}" class="skill_meter">
         </div>
     `;
 
