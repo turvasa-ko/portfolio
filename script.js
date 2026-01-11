@@ -37,6 +37,7 @@ const Skills = {
         {name: "Python", level: SkillLevel[3]},
         {name: "Java", level: SkillLevel[2]},
         {name: "Rust", level: SkillLevel[4]},
+        {name: "C", level: SkillLevel[4]},
         {name: "Assembly (Y86-64)", level: SkillLevel[5]},
         {name: "JavaScript", level: SkillLevel[4]},
         {name: "HTML", level: SkillLevel[4]}
